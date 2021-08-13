@@ -1,3 +1,3 @@
 defmodule TerrManWeb.SessionView do
-    TerrManWeb, :view
+    use TerrManWeb, :view
 end

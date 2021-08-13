@@ -17,11 +17,6 @@
     <%= @page.views %>
   </li>
 
-  <li>
-    <strong>Integer:</strong>
-    <%= @page.integer %>
-  </li>
-
 </ul>
 
 <span><%= link "Edit", to: Routes.cms_page_path(@conn, :edit, @page) %></span>

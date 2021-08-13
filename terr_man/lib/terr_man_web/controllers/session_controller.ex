@@ -1,5 +1,5 @@
-defmodule TerrMan.SessionController do
-    use.TerrManWeb, :controller
+defmodule TerrManWeb.SessionController do
+    use TerrManWeb, :controller
 
     alias TerrManWeb.Accounts
     
@@ -18,11 +18,11 @@ defmodule TerrMan.SessionController do
         {:error, :unauthorized} ->
           conn
           |> put_flash(:error, "Bad email/password")
-          |> redirect(to: session_path(conn, :new))
+          |> redirect(to: Routes.session_path(conn, :new))
         end
     end
 
-    def delete(conn, _) do
+    def delete(conn, %{"id" => :user_id}) do
         conn
         |> configure_session(drop: true)
         |> redirect(to: "/")

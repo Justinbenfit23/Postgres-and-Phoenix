@@ -4,7 +4,6 @@ defmodule TerrMan.CMS.Page do
 
   schema "pages" do
     field :body, :string
-    field :integer, :string
     field :title, :string
     field :views, :string
 
@@ -14,7 +13,7 @@ defmodule TerrMan.CMS.Page do
   @doc false
   def changeset(page, attrs) do
     page
-    |> cast(attrs, [:title, :body, :views, :integer])
-    |> validate_required([:title, :body, :views, :integer])
+    |> cast(attrs, [:title, :body])
+    |> validate_required([:title, :body,])
   end
 end

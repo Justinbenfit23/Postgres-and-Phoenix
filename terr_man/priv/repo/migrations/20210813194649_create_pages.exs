@@ -5,8 +5,7 @@ defmodule TerrMan.Repo.Migrations.CreatePages do
     create table(:pages) do
       add :title, :string
       add :body, :string
-      add :views, :string
-      add :integer, :string
+      add :views, :integer, default: 0
 
       timestamps()
     end

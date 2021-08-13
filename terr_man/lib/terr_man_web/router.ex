@@ -25,7 +25,7 @@ defmodule TerrManWeb.Router do
   end
 
   scope "/cms", TerrManWeb.CMS, as: :cms do
-    pipe_through :browser
+    pipe_through [:browser, :autheticate_user]
 
     resources "/pages", PageController
   end

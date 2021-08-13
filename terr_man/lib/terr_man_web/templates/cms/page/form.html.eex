@@ -13,14 +13,6 @@
   <%= text_input f, :body %>
   <%= error_tag f, :body %>
 
-  <%= label f, :views %>
-  <%= text_input f, :views %>
-  <%= error_tag f, :views %>
-
-  <%= label f, :integer %>
-  <%= text_input f, :integer %>
-  <%= error_tag f, :integer %>
-
   <div>
     <%= submit "Save" %>
   </div>
